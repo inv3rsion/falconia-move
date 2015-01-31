@@ -29,7 +29,8 @@ def getUntilDifferent(x, y):
         dx, dy = getGPS();
     
 def around(x, y, tx, ty):
-    return (tx - DIST_THRESHOLD <= x <= tx + DIST_THRESHOLD) and (ty - DIST_THRESHOLD <= y <= ty + DIST_THRESHOLD);
+    return (tx - x) ** 2 + (ty - y) ** 2 <= DIST_THRESHOLD ** 2;
+#    return (tx - DIST_THRESHOLD <= x <= tx + DIST_THRESHOLD) and (ty - DIST_THRESHOLD <= y <= ty + DIST_THRESHOLD);
 
 def moveUntilAt(tx, ty):
     dx, dy = getGPS();
