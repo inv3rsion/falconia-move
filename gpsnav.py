@@ -77,7 +77,7 @@ def stop():
     motors.write(STOP);
 
 
-time.sleep(10);
+time.sleep(13);
 # get current position
 curX, curY = getGPS();
 print "currentPosition (start)", curX, curY;
