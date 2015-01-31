@@ -96,15 +96,14 @@ print "currentAngle", curAngle;
 
 for point in points:
     time.sleep(10);
-    nextX, nextY = getGPS();
     TPOS_X = point[0];
     TPOS_Y = point[1];
     stop();
     curX, curY = getGPS();
     print "curPos", curX, curY;
     # get target position
-    moveX = TPOS_X - nextX;
-    moveY = TPOS_Y - nextY;
+    moveX = TPOS_X - curX;
+    moveY = TPOS_Y - curY;
     # get angle
     targetAngle = calcAngle(moveX, moveY);
     # turn to get correct angle
