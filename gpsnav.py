@@ -14,7 +14,7 @@ FULL_TURN_TIME = 23; # TIME TAKES TO TURN 360, IN SECONDS
 TPOS_X = 1433;
 TPOS_Y = 408;
 DIST_THRESHOLD = 100;
-points = [(1433, 408)];
+points = [(1472, 380), (1129, 350), (1001, 797)];
 
 def getGPS():
     try:
@@ -100,12 +100,13 @@ for point in points:
     TPOS_Y = point[1];
     stop();
     curX, curY = getGPS();
-# get target position
+    print "curPos", curX, curY;
+    # get target position
     moveX = TPOS_X - nextX;
     moveY = TPOS_Y - nextY;
-# get angle
+    # get angle
     targetAngle = calcAngle(moveX, moveY);
-# turn to get correct angle
+    # turn to get correct angle
     moveAngle = (targetAngle - curAngle) % 360;
     print "moveangle", moveAngle;
     turn("LEFT", moveAngle);
