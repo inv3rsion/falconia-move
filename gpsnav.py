@@ -95,7 +95,7 @@ curAngle = calcAngle(difX, difY);
 print "currentAngle", curAngle;
 
 for point in points:
-    time.sleep(10);
+    time.sleep(3);
     TPOS_X = point[0];
     TPOS_Y = point[1];
     stop();

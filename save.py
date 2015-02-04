@@ -7,6 +7,8 @@ output = open("/home/ubuntu/falconia/commands.txt", "w");
 motors = serial.Serial("/dev/ttymxc3", 9600);
 stdscr = curses.initscr();
 
+stdscr.getch();
+
 while True:
     start_time = time.time();
     c = stdscr.getch();
