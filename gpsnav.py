@@ -38,7 +38,10 @@ def moveUntilAt(tx, ty):
         forward(3);
         stop();
         getUntilDifferent(dx, dy);
-        dx, dy = getGPS();
+        try:
+            dx, dy = getGPS();
+        except:
+            print "Couldn't Get GPS";
     stop();
     
 def forward(t):
