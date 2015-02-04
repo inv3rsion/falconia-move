@@ -26,7 +26,10 @@ def getGPS():
 def getUntilDifferent(x, y):
     dx, dy = getGPS();
     while dx == x and dy == y:
-        dx, dy = getGPS();
+        try:
+            dx, dy = getGPS();
+        except:
+            pass;
     
 def around(x, y, tx, ty):
     return (tx - x) ** 2 + (ty - y) ** 2 <= DIST_THRESHOLD ** 2;
