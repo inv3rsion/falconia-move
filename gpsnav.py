@@ -14,7 +14,7 @@ FULL_TURN_TIME = 23; # TIME TAKES TO TURN 360, IN SECONDS
 TPOS_X = 1433;
 TPOS_Y = 408;
 DIST_THRESHOLD = 100;
-points = [(1102, 453), (936, 666), (592, 795), (574, 1131), (570, 1466)];
+points = [(936, 666), (592, 795), (574, 1131), (570, 1466)];
 
 def getGPS():
     try:
